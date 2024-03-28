@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="registration-form">
+        <h1>Lazy Registration</h1>
+        <form id="registration-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button id="register-btn">Register</button>
+        </form>
+    </div>
+
+    <div class="profile-form" style="display:none;">
+        <h1>Complete Your Profile</h1>
+        <form id="profile-form">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="tel" id="phone" placeholder="Phone Number">
+            <input type="text" id="address" placeholder="Address">
+            <button id="complete-profile-btn">Complete Profile</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
