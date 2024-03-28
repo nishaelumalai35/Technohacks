@@ -1,0 +1,25 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const nameInput = document.querySelector('.js-name-input');
+    const dueDateInput = document.querySelector('.js-due-date');
+    const addButton = document.querySelector('.js-add-todo-button');
+    const todoList = document.querySelector('.js-todo-list');
+
+    addButton.addEventListener('click', function () {
+        const taskName = nameInput.value;
+        const dueDate = dueDateInput.value;
+        if (taskName.trim() !== '') {
+            const taskItem = document.createElement('div');
+            taskItem.classList.add('todo-item');
+            taskItem.innerHTML = `
+                <span class="todo-name">${taskName}</span>
+                <span class="todo-date">${dueDate}</span>
+            `;
+            todoList.appendChild(taskItem);
+            todoList.appendChild(document.createElement('br')); 
+            nameInput.value = '';
+            dueDateInput.value = '';
+        } else {
+            alert('Please enter a task name.');
+        }
+    });
+});
